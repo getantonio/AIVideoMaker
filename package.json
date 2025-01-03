@@ -1,0 +1,13 @@
+{
+  "name": "aivideomaker",
+  "version": "1.0.0",
+  "description": "AI Video Maker project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "your-build-command-here"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+} 
