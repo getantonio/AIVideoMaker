@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="hero">
+    <div class="container">
+        <h1>Make High-Quality Videos with AI</h1>
+        <p>Animated stories, viral videos, short films, and more...</p>
+        <button class="cta-button" onclick="location.href='/generate'">Create Video</button>
+    </div>
+</header>
+
+<section id="features" class="features">
+    <div class="container">
+        <h2>Make it easy... to make videos.</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>AI-Powered Scripts</h3>
+                <p>Generate creative scripts using Claude AI</p>
+            </div>
+            <div class="feature-card">
+                <h3>Voiceovers</h3>
+                <p>Auto-generated professional voiceovers</p>
+            </div>
+            <div class="feature-card">
+                <h3>Background Visuals</h3>
+                <p>AI-generated visuals that match your script</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

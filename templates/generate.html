@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="generate-section">
+    <div class="container">
+        <h1>Generate Your Video Script</h1>
+        <div class="generate-form">
+            <textarea id="scriptPrompt" 
+                      placeholder="Describe your video idea... (e.g., 'Create a 2-minute explainer video about artificial intelligence')" 
+                      rows="4"></textarea>
+            <div class="options-grid">
+                <div class="option-group">
+                    <label>Video Style</label>
+                    <select id="videoStyle">
+                        <option value="animated">Animated</option>
+                        <option value="realistic">Realistic</option>
+                        <option value="whiteboard">Whiteboard</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label>Duration</label>
+                    <select id="duration">
+                        <option value="30">30 seconds</option>
+                        <option value="60">1 minute</option>
+                        <option value="120">2 minutes</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label>Voice Style</label>
+                    <select id="voiceStyle">
+                        <option value="professional">Professional</option>
+                        <option value="friendly">Friendly</option>
+                        <option value="energetic">Energetic</option>
+                    </select>
+                </div>
+            </div>
+            <button onclick="generateScript()" class="generate-button">Generate Script</button>
+        </div>
+        <div class="result-section">
+            <textarea id="generatedScript" 
+                      placeholder="Your generated script will appear here..." 
+                      rows="10" 
+                      readonly></textarea>
+            <div class="action-buttons">
+                <button onclick="copyScript()" class="action-button">Copy Script</button>
+                <button onclick="downloadScript()" class="action-button">Download Script</button>
+                <button onclick="generateVideo()" class="action-button primary">Generate Video</button>
+            </div>
+        </div>
+        <div id="videoPreview" class="video-preview" style="display: none;">
+            <h2>Your Video</h2>
+            <div class="video-container">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <video id="resultVideo" controls style="display: none;">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 
